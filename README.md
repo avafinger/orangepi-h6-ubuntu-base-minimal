@@ -23,7 +23,7 @@ https://mega.nz/#!NPoSkIyT!Ul1n_1WVklPXlR2nHQxEE356_2iM8WAWWm9AWNR08hg
 | gcc version            |      8.2.0            |
 | display                |      hdmi             |
 | graphical interface    |      CLI              |
-| pmic                   |      axp806           |
+| pmic                   |      axp805/6         |
 | idle Temp ºC / freq    |  40 ºC / ~480 Mhz     |
 | full Temp ºC / freq    |  78 ºC / 1.8 GHz      |
 | RAM memory usage (avg) |      65  Mbytes       |
@@ -52,7 +52,7 @@ then
 
 # Release v1.0
 
-* minor fixes and optimizations (4K, journaling , heart-beat)
+* minor fixes and optimizations (journaling , heart-beat)
 * DHCP enabled (default)
 
 		user: ubuntu
@@ -405,3 +405,8 @@ Mainline kernel 5.0 bootlog
 	[    6.747334] Adding 127236k swap on /dev/zram3.  Priority:5 extents:1 across:127236k SS
 	[    7.432790] dwmac-sun8i 5020000.ethernet eth0: Link is Up - 1Gbps/Full - flow control rx/tx
 	[    7.432822] IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+
+# Acknowledgments
+
+* Icenowy Zheng for the work on H6
+* Armbian
