@@ -408,5 +408,5 @@ Mainline kernel 5.0 bootlog
 
 # Acknowledgments
 
-* Icenowy Zheng for the work on H6
+* Icenowy Zheng and Jernej Skrabec (linux-sunxi) for their work on H6
 * Armbian
