@@ -74,6 +74,27 @@ On first login:
 	sudo apt-get dist-upgrade
 
 
+# Release v1.1
+
+
+* HDMI
+* DVFS (1.8 GHz)
+* i2c1 (enabled)
+* spidev0.0 (enabled)
+
+Get v1.1 files:
+
+		wget $(curl -s https://api.github.com/repos/avafinger/orangepi-h6-ubuntu-base-minimal/releases | grep -oP '"browser_download_url": "\K(.*)(?=")' | grep v1.1)
+
+
+
+Install:
+		sudo dpkg-deb --build linux-image-5.0.1-h6_1.0-1
+		sync
+		sudo shutdown -h now
+		
+		Wait a few seconds e push the Power button (ON/OFF) for 2 ~ 5 seconds to power on the board.
+
 
 **Tip**: You may need to update the file **resolver.conf** to reflect your network (DNS)
 
