@@ -17,23 +17,23 @@ https://mega.nz/#!NPoSkIyT!Ul1n_1WVklPXlR2nHQxEE356_2iM8WAWWm9AWNR08hg
   Pasw: ubuntu
 
 
-|  SBC Dev Board sample  |   Orange Pi One Plus  |
-|------------------------|-----------------------|
-| kernel version         |      5.0.0 mainline   |
-| gcc version            |      8.2.0            |
-| display                |      hdmi             |
-| graphical interface    |      CLI              |
-| pmic                   |      axp805/6         |
-| idle Temp ºC / freq    |  40 ºC / ~480 Mhz     |
-| full Temp ºC / freq    |  78 ºC / 1.8 GHz      |
-| RAM memory usage (avg) |      65  Mbytes       |
-| i2c                    |      no               |
-| spi                    |      no               |
-| Camera                 |      no               |
-| Wifi                   |      no               |
-| BT                     |      no               |
-| ethernet               |    100 MBit / 1 GBit  |
-| issues                 | reboot = shutdown     |
+|  SBC Dev Board sample  |   Orange Pi One Plus  |   Orange Pi One Plus  |
+|------------------------|-----------------------|-----------------------|
+| kernel version         |      5.0.0 mainline   |      5.0.1 mainline   |
+| gcc version            |      8.2.0            |      8.2.0            |
+| display                |      hdmi             |      hdmi             |
+| graphical interface    |      CLI              |      CLI              |
+| pmic                   |      axp805/6         |      axp805/6         |
+| idle Temp ºC / freq    |  40 ºC / ~480 Mhz     |  40 ºC / ~480 Mhz     |
+| full Temp ºC / freq    |  78 ºC / 1.8 GHz      |  78 ºC / 1.8 GHz      |
+| RAM memory usage (avg) |      65  Mbytes       |      65  Mbytes       |
+| i2c                    |      no               |      yes              |
+| spi                    |      no               |      spidev0.0        |
+| Camera                 |      none             |      none             |
+| Wifi                   |      none             |      none             |
+| BT                     |      none             |      none             |
+| ethernet               |    100 MBit / 1 GBit  |    100 MBit / 1 GBit  |
+| issues                 | reboot = shutdown     | reboot = shutdown     |
 
 You need *wget* and *curl* installed to grab the files in a Linux distro or use the **img** above.
 
