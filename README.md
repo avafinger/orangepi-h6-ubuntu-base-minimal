@@ -89,9 +89,13 @@ Get v1.1 files:
 
 
 Install:
+
+
 		sudo dpkg-deb --build linux-image-5.0.1-h6_1.0-1
 		sync
 		sudo shutdown -h now
+
+
 		
 		Wait a few seconds e push the Power button (ON/OFF) for 2 ~ 5 seconds to power on the board.
 
