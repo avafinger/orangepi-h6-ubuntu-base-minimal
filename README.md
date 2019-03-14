@@ -91,7 +91,7 @@ Get v1.1 files:
 Install:
 
 
-		sudo dpkg-deb --build linux-image-5.0.1-h6_1.0-1
+		sudo dpkg-deb -i linux-image-5.0.1-h6_1.0-1.deb
 		sync
 		sudo shutdown -h now
 
