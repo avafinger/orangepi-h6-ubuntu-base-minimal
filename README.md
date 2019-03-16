@@ -17,23 +17,23 @@ https://mega.nz/#!NPoSkIyT!Ul1n_1WVklPXlR2nHQxEE356_2iM8WAWWm9AWNR08hg
   Pasw: ubuntu
 
 
-|  SBC Dev Board sample  |   Orange Pi One Plus  |   Orange Pi One Plus  |
-|------------------------|-----------------------|-----------------------|
-| kernel version         |      5.0.0 mainline   |      5.0.1 mainline   |
-| gcc version            |      8.2.0            |      8.2.0            |
-| display                |      hdmi             |      hdmi             |
-| graphical interface    |      CLI              |      CLI              |
-| pmic                   |      axp805/6         |      axp805/6         |
-| idle Temp ºC / freq    |  40 ºC / ~480 Mhz     |  40 ºC / ~480 Mhz     |
-| full Temp ºC / freq    |  78 ºC / 1.8 GHz      |  78 ºC / 1.8 GHz      |
-| RAM memory usage (avg) |      65  Mbytes       |      65  Mbytes       |
-| i2c                    |      no               |      yes              |
-| spi                    |      no               |      spidev0.0        |
-| Camera                 |      none             |      none             |
-| Wifi                   |      none             |      none             |
-| BT                     |      none             |      none             |
-| ethernet               |    100 MBit / 1 GBit  |    100 MBit / 1 GBit  |
-| issues                 | reboot = shutdown     | reboot = shutdown     |
+|  SBC Dev Board sample  |   Orange Pi One Plus  |   Orange Pi One Plus  |   Orange Pi One Plus  |
+|------------------------|-----------------------|-----------------------|-----------------------|
+| kernel version         |      5.0.0            |      5.0.1            |      5.0.2            |
+| gcc version            |      8.2.0            |      8.2.0            |      8.2.0            |
+| display                |      hdmi             |      hdmi             |      hdmi             |
+| graphical interface    |      CLI              |      CLI              |      CLI              |
+| pmic                   |      axp805/6         |      axp805/6         |      axp805/6         |
+| idle Temp ºC / freq    |  40 ºC / ~480 Mhz     |  40 ºC / ~480 Mhz     |  40 ºC / ~480 Mhz     |
+| full Temp ºC / freq    |  78 ºC / 1.8 GHz      |  78 ºC / 1.8 GHz      |  80 ºC / 1.8 GHz      |
+| RAM memory usage (avg) |      65  Mbytes       |      65  Mbytes       |      65  Mbytes       |
+| i2c                    |      no               |      yes              |      yes              |
+| spi                    |      no               |      spidev0.0        |      spidev0.0        |
+| Camera                 |      none             |      none             |      none             |
+| Wifi                   |      none             |      none             |      none             |
+| BT                     |      none             |      none             |      none             |
+| ethernet               |    100 MBit / 1 GBit  |    100 MBit / 1 GBit  |      Gbps             |
+| issues                 | reboot = shutdown     | reboot = shutdown     | reboot = shutdown     |
 
 You need *wget* and *curl* installed to grab the files in a Linux distro or use the **img** above.
 
@@ -98,6 +98,31 @@ Install:
 
 		
 		Wait a few seconds e push the Power button (ON/OFF) for 2 ~ 5 seconds to power on the board.
+
+
+# Release v1.2
+
+Mainline Kernel 5.0.2
+
+* HDMI
+* DVFS ( 1.8 Ghz ~ **throttle at 80º C** )
+* Gbps
+* i2c
+* spidev
+
+**The DT has been changed for best performance so CPU will throttle only at 80º C, get a Heatsink**
+The test showed the board is still stable for a high load > 1 hr, no files got corrupted.
+
+Get v1.2 files:
+
+		wget $(curl -s https://api.github.com/repos/avafinger/orangepi-h6-ubuntu-base-minimal/releases | grep -oP '"browser_download_url": "\K(.*)(?=")' | grep v1.2)
+
+
+Install new Image:
+
+		sudo dpkg -i linux-image-5.0.2-h6_1.0-2.deb
+		sync
+		sudo shutdown -h now
 
 
 **Tip**: You may need to update the file **resolver.conf** to reflect your network (DNS)
