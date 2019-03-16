@@ -156,6 +156,8 @@ Flash Image to SD CARD:
 
 [![htop](https://github.com/avafinger/orangepi-h6-ubuntu-base-minimal/raw/master/img/htop.png)]
 
+[![htop](https://github.com/avafinger/orangepi-h6-ubuntu-base-minimal/raw/master/img/hdmi_1920x1080.png)]
+
 
 Mainline kernel 5.0 bootlog
 
