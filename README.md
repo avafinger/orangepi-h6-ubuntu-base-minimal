@@ -19,21 +19,25 @@ https://mega.nz/#!NPoSkIyT!Ul1n_1WVklPXlR2nHQxEE356_2iM8WAWWm9AWNR08hg
 
 |  SBC Dev Board sample  |   Orange Pi One Plus  |   Orange Pi One Plus  |   Orange Pi One Plus  |   Orange Pi One Plus  |
 |------------------------|-----------------------|-----------------------|-----------------------|-----------------------|
-| kernel version         |      5.0.0            |      5.0.1            |      5.0.2            |      5.0.2            |
-| gcc version            |      8.2.0            |      8.2.0            |      8.2.0            |      8.2.0            |
+| kernel version         |      5.1.rc1          |      5.0.1            |      5.0.2            |      5.0.2            |
+| gcc version            |      7.3              |      8.2.0            |      8.2.0            |      8.2.0            |
 | display                |      hdmi             |      hdmi             |      hdmi             |   hdmi (1920x100)     |
-| graphical interface    |      CLI              |      CLI              |      CLI              |      LXDE             |
+| graphical interface    | Unabled to read EDID *|      CLI              |      CLI              |      LXDE             |
 | pmic                   |      axp805/6         |      axp805/6         |      axp805/6         |      axp805/6         |
-| idle Temp ºC / freq    |  40 ºC / ~480 Mhz     |  40 ºC / ~480 Mhz     |  40 ºC / ~480 Mhz     |  42 ºC / ~480 Mhz     |
-| full Temp ºC / freq    |  78 ºC / 1.8 GHz      |  78 ºC / 1.8 GHz      |  80 ºC / 1.8 GHz      |  80 ºC / 1.8 GHz      |
-| RAM memory usage (avg) |      65  Mbytes       |      65  Mbytes       |      65  Mbytes       |      65  Mbytes       |
+| idle Temp ºC / freq    |  40 ºC / ~480 Mhz   * |  40 ºC / ~480 Mhz     |  40 ºC / ~480 Mhz     |  42 ºC / ~480 Mhz     |
+| full Temp ºC / freq    |  80 ºC / 1.8 GHz    * |  78 ºC / 1.8 GHz      |  80 ºC / 1.8 GHz      |  80 ºC / 1.8 GHz      |
+| RAM memory usage (avg) |     109  Mbytes       |      65  Mbytes       |      65  Mbytes       |     155  Mbytes       |
 | i2c                    |      no               |      yes              |      yes              |      yes              |
 | spi                    |      no               |      spidev0.0        |      spidev0.0        |      spidev0.0        |
 | Camera                 |      none             |      none             |      none             |      none             |
 | Wifi                   |      none             |      none             |      none             |      none             |
 | BT                     |      none             |      none             |      none             |      none             |
-| ethernet               |    100 MBit / 1 GBit  |    100 MBit / 1 GBit  |      Gbps             |      Gbps             |
+| ethernet               |      Gbps          t  |    100 MBit / 1 GBit  |      Gbps             |      Gbps             |
 | issues                 | reboot = shutdown     | reboot = shutdown     | reboot = shutdown     | reboot = shutdown     |
+
+* Unable to read EDID to set 1920x1080 (kernel 5.1-rc1)
+* During the various 7z b stress tests, the board ended up being turned off (kernel 5.1-rc1) **Not stable**
+* bootlog: https://gist.github.com/avafinger/8c4fe50e90fd3457e9b195fc970e86a1
 
 You need *wget* and *curl* installed to grab the files in a Linux distro or use the **img** above.
 
