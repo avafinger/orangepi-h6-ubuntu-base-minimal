@@ -41,6 +41,30 @@ https://mega.nz/#!NPoSkIyT!Ul1n_1WVklPXlR2nHQxEE356_2iM8WAWWm9AWNR08hg
 * bootlog: https://gist.github.com/avafinger/8c4fe50e90fd3457e9b195fc970e86a1
 * bootlog 5.1-rc2: https://gist.github.com/avafinger/cfb7fd51543601a48b58795bb8e98138
 
+# HDMI work around (fix)
+
+This workaround fix the EDID readout mismatch.
+
+* Edit the file /boot/boot.cmd
+* Add the line:
+	gpio set ph2
+
+Something like:
+
+	# Recompile with:
+	# cd /media/alex/boot/
+	# sudo mkimage -C none -A arm -T script -d boot.cmd boot.scr
+	
+	gpio set ph2
+	setenv fsck.repair yes
+	setenv ramdisk initrd.img
+	setenv kernel Image
+
+Save it and then recompile:
+	
+	sudo mkimage -C none -A arm -T script -d boot.cmd boot.scr
+
+# Installing
 You need *wget* and *curl* installed to grab the files in a Linux distro or use the **img** above.
 
 Get the latest files by running (or seee below to fetch specific Release version files):
