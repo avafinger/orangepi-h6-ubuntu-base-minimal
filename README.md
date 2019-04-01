@@ -41,7 +41,7 @@ https://mega.nz/#!NPoSkIyT!Ul1n_1WVklPXlR2nHQxEE356_2iM8WAWWm9AWNR08hg
 * bootlog: https://gist.github.com/avafinger/8c4fe50e90fd3457e9b195fc970e86a1
 * bootlog 5.1-rc2: https://gist.github.com/avafinger/cfb7fd51543601a48b58795bb8e98138
 
-# HDMI work around (fix)
+# HDMI workaround (fix)
 
 This workaround fix the EDID readout mismatch.
 
