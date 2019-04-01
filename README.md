@@ -43,7 +43,7 @@ https://mega.nz/#!NPoSkIyT!Ul1n_1WVklPXlR2nHQxEE356_2iM8WAWWm9AWNR08hg
 
 # HDMI workaround (fix)
 
-This workaround fix the EDID readout mismatch.
+This is a workaround for the EDID wrong mode.
 
 * Edit the file /boot/boot.cmd
 * Add the line:
