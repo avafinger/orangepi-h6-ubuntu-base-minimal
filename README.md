@@ -19,23 +19,26 @@ https://mega.nz/#!NPoSkIyT!Ul1n_1WVklPXlR2nHQxEE356_2iM8WAWWm9AWNR08hg
 
 |  SBC Dev Board sample  |   Orange Pi One Plus  |   Orange Pi One Plus  |   Orange Pi One Plus  |   Orange Pi One Plus  |
 |------------------------|-----------------------|-----------------------|-----------------------|-----------------------|
-| kernel version         |      5.1.rc3          |      5.0.1            |      5.0.2            |      5.0.2            |
+| kernel version         |      5.1.rc4          |      5.0.1            |      5.0.2            |      5.0.2            |
 | gcc version            |      7.3              |      8.2.0            |      8.2.0            |      8.2.0            |
 | display                |      hdmi             |      hdmi             |      hdmi             |   hdmi (1920x100)     |
-| graphical interface    | Unabled to read EDID *|      CLI              |      CLI              |      LXDE             |
+| graphical interface    |random EDID read freeze|      CLI              |      CLI              |      LXDE             |
 | pmic                   |      axp805/6         |      axp805/6         |      axp805/6         |      axp805/6         |
 | idle Temp ºC / freq    |  40 ºC / ~480 Mhz   * |  40 ºC / ~480 Mhz     |  40 ºC / ~480 Mhz     |  42 ºC / ~480 Mhz     |
 | full Temp ºC / freq    |  80 ºC / 1.8 GHz    * |  78 ºC / 1.8 GHz      |  80 ºC / 1.8 GHz      |  80 ºC / 1.8 GHz      |
 | RAM memory usage (avg) |     109  Mbytes       |      65  Mbytes       |      65  Mbytes       |     155  Mbytes       |
 | i2c                    |      yes              |      yes              |      yes              |      yes              |
-| spi                    |      no               |      spidev0.0        |      spidev0.0        |      spidev0.0        |
+| spi                    |      spidev0.0        |      spidev0.0        |      spidev0.0        |      spidev0.0        |
 | Camera                 |      none             |      none             |      none             |      none             |
 | Wifi                   |      none             |      none             |      none             |      none             |
 | BT                     |      none             |      none             |      none             |      none             |
 | ethernet               |      Gbps / 100Mbps   |    100 MBit / 1 GBit  |      Gbps             |      Gbps             |
-| issues                 | reboot = shutdown     | reboot = shutdown     | reboot = shutdown     | reboot = shutdown     |
+| sound                  |  hdmi-sound (almost)  |                       |                       |                       |
+| ir                     |  probed but no works  |                       |                       |                       |
+| issues                 |    (** reboot)        | reboot = shutdown     | reboot = shutdown     | reboot = shutdown     |
 |                        |                       |                       |                       |                       |
 
+(**) possible fix with clementperon patch (atf + u-boot)
 * bootlog: https://gist.github.com/avafinger/8c4fe50e90fd3457e9b195fc970e86a1
 * bootlog 5.1-rc2: https://gist.github.com/avafinger/cfb7fd51543601a48b58795bb8e98138
 
