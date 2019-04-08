@@ -222,6 +222,12 @@ Get v1.5 files:
 		wget $(curl -s https://api.github.com/repos/avafinger/orangepi-h6-ubuntu-base-minimal/releases | grep -oP '"browser_download_url": "\K(.*)(?=")' | grep v1.5)
 
 
+# Release v1.7
+
+Mainline Kernel 5.1.0.rc4 (Experimental)
+
+https://github.com/avafinger/orangepi-h6-ubuntu-base-minimal/releases/tag/v1.7
+
 
 [![htop](https://github.com/avafinger/orangepi-h6-ubuntu-base-minimal/raw/master/img/htop.png)]
 
