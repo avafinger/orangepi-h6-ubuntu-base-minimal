@@ -33,12 +33,14 @@ https://mega.nz/#!NPoSkIyT!Ul1n_1WVklPXlR2nHQxEE356_2iM8WAWWm9AWNR08hg
 | Wifi                   |      none             |      none             |      none             |      none             |
 | BT                     |      none             |      none             |      none             |      none             |
 | ethernet               |      Gbps / 100Mbps   |    100 MBit / 1 GBit  |      Gbps             |      Gbps             |
-| sound                  |  hdmi-sound (almost)  |                       |                       |                       |
+| sound                  |  hdmi-sound ( ***  )  |                       |                       |                       |
 | ir                     |  probed but no works  |                       |                       |                       |
 | issues                 |    (** reboot)        | reboot = shutdown     | reboot = shutdown     | reboot = shutdown     |
 |                        |                       |                       |                       |                       |
 
-(**) possible fix with clementperon patch (atf + u-boot)
+(**) possible fix proposed by clementperon patch (atf + u-boot)
+(***) hdmi-sound works upddating to u-boot 2019, see v1.7 for more info
+
 * bootlog: https://gist.github.com/avafinger/8c4fe50e90fd3457e9b195fc970e86a1
 * bootlog 5.1-rc2: https://gist.github.com/avafinger/cfb7fd51543601a48b58795bb8e98138
 
@@ -230,6 +232,10 @@ Get v1.5 files:
 Mainline Kernel 5.1.0.rc4 (Experimental)
 
 https://github.com/avafinger/orangepi-h6-ubuntu-base-minimal/releases/tag/v1.7
+
+**A fix for hdmi-sound:**
+* update to u-boot 2019
+
 
 
 [![htop](https://github.com/avafinger/orangepi-h6-ubuntu-base-minimal/raw/master/img/htop.png)]
