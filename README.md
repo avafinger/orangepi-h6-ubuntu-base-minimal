@@ -82,6 +82,14 @@ then
 	Unzip the file and flash it to SD card (8GB) using
 
 
+# Install ALSA
+
+	sudo apt-get install alsa-utils alsa-tools libasound2 alsa-base
+	
+test hdmi-sound:
+
+	sudo aplay /usr/share/sounds/alsa/Front_Left.wav
+	Playing WAVE '/usr/share/sounds/alsa/Front_Left.wav' : Signed 16 bit Little Endian, Rate 48000 Hz, Mono
 
 
 # Release v1.0
