@@ -84,9 +84,17 @@ then
 
 # Install ALSA
 
+In order to get a clear hdmi-soun output you must update u-boot to version 2019 and install ALSA.
+
+* Update u-boot (v1.7)
+
+	sudo dd if=./u-boot-hdmi-sound.bin of=/dev/sdc bs=8k seek=1
+
+* Install ALSA
+
 	sudo apt-get install alsa-utils alsa-tools libasound2 alsa-base
 	
-test hdmi-sound:
+* Test hdmi-sound:
 
 	sudo aplay /usr/share/sounds/alsa/Front_Left.wav
 	Playing WAVE '/usr/share/sounds/alsa/Front_Left.wav' : Signed 16 bit Little Endian, Rate 48000 Hz, Mono
