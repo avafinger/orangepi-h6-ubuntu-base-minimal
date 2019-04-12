@@ -39,6 +39,7 @@ https://mega.nz/#!NPoSkIyT!Ul1n_1WVklPXlR2nHQxEE356_2iM8WAWWm9AWNR08hg
 |                        |                       |                       |                       |                       |
 
 ( **  ) possible fix with clementperon patch (atf + u-boot)
+
 ( *** ) - Fix for IR:  https://github.com/avafinger/orangepi-h6-ubuntu-base-minimal/releases/tag/ir-1 (thanks to clementperon)
 
 * bootlog: https://gist.github.com/avafinger/8c4fe50e90fd3457e9b195fc970e86a1
