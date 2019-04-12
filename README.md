@@ -33,7 +33,7 @@ https://mega.nz/#!NPoSkIyT!Ul1n_1WVklPXlR2nHQxEE356_2iM8WAWWm9AWNR08hg
 | Wifi                   |      none             |      none             |      none             |      none             |
 | BT                     |      none             |      none             |      none             |      none             |
 | ethernet               |      Gbps / 100Mbps   |    100 MBit / 1 GBit  |      Gbps             |      Gbps             |
-| sound                  |  hdmi-sound (almost)  |                       |                       |                       |
+| sound                  |  hdmi-sound (yes)     |                       |                       |                       |
 | ir                     |  yes ( *** fix here ) |                       |                       |                       |
 | issues                 |    (** reboot)        | reboot = shutdown     | reboot = shutdown     | reboot = shutdown     |
 |                        |                       |                       |                       |                       |
