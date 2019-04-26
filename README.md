@@ -19,8 +19,8 @@ https://mega.nz/#!NPoSkIyT!Ul1n_1WVklPXlR2nHQxEE356_2iM8WAWWm9AWNR08hg
 
 |  SBC Dev Board sample  |   Orange Pi One Plus  |   Orange Pi One Plus  |   Orange Pi One Plus  |   Orange Pi One Plus  |
 |------------------------|-----------------------|-----------------------|-----------------------|-----------------------|
-| kernel version         |      5.1.rc4          |      5.0.1            |      5.0.2            |      5.0.2            |
-| gcc version            |      7.3              |      8.2.0            |      8.2.0            |      8.2.0            |
+| kernel version         |      5.1.rc6          |      5.0.1            |      5.0.2            |      5.0.2            |
+| gcc version            |      8.2.0            |      8.2.0            |      8.2.0            |      8.2.0            |
 | display                |      hdmi             |      hdmi             |      hdmi             |   hdmi (1920x100)     |
 | graphical interface    |random EDID read freeze|      CLI              |      CLI              |      LXDE             |
 | pmic                   |      axp805/6         |      axp805/6         |      axp805/6         |      axp805/6         |
@@ -34,7 +34,7 @@ https://mega.nz/#!NPoSkIyT!Ul1n_1WVklPXlR2nHQxEE356_2iM8WAWWm9AWNR08hg
 | BT                     |      none             |      none             |      none             |      none             |
 | ethernet               |      Gbps / 100Mbps   |    100 MBit / 1 GBit  |      Gbps             |      Gbps             |
 | sound                  |  hdmi-sound (yes)     |                       |                       |                       |
-| ir                     |  yes ( *** fix here ) |                       |                       |                       |
+| ir                     |  yes                  |                       |                       |                       |
 | issues                 |    (** reboot)        | reboot = shutdown     | reboot = shutdown     | reboot = shutdown     |
 |                        |                       |                       |                       |                       |
 
@@ -253,6 +253,15 @@ https://github.com/avafinger/orangepi-h6-ubuntu-base-minimal/releases/tag/v1.7
 **A fix for hdmi-sound:**
 * update to u-boot 2019
 
+
+# Release v1.8
+
+Mainline Kernel 5.1.0.rc6 (Experimental)
+
+https://github.com/avafinger/orangepi-h6-ubuntu-base-minimal/releases/tag/v1.8
+
+**A fix for hdmi-sound:**
+* update to u-boot 2019
 
 
 [![htop](https://github.com/avafinger/orangepi-h6-ubuntu-base-minimal/raw/master/img/htop.png)]
