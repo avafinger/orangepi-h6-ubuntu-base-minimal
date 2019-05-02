@@ -9,9 +9,12 @@ This is a follow up on the mainline kernel 5.0 for the H6 SBC:
 * DVFS
 * Gbps and fast ethernet
 
-
+**kernel 5.0.y**
 OS Img is available here (use 7z to unzip and burn to SD card with Win32DiskImager or Etcher):
 https://mega.nz/#!NPoSkIyT!Ul1n_1WVklPXlR2nHQxEE356_2iM8WAWWm9AWNR08hg
+
+**kernel 5.1.y**
+https://github.com/avafinger/orangepi-h6-ubuntu-base-minimal/releases/tag/v1.9
 
   User: ubuntu     
   Pasw: ubuntu
@@ -19,33 +22,29 @@ https://mega.nz/#!NPoSkIyT!Ul1n_1WVklPXlR2nHQxEE356_2iM8WAWWm9AWNR08hg
 
 |  SBC Dev Board sample  |   Orange Pi One Plus  |   Orange Pi One Plus  |   Orange Pi One Plus  |   Orange Pi One Plus  |
 |------------------------|-----------------------|-----------------------|-----------------------|-----------------------|
-| kernel version         |      5.1.rc6          |      5.0.1            |      5.0.2            |      5.0.2            |
-| gcc version            |      8.2.0            |      8.2.0            |      8.2.0            |      8.2.0            |
+| kernel version         |      5.1.rc7          |      5.0.1            |      5.0.2            |      5.0.2            |
+| gcc version            |      7.3.0            |      8.2.0            |      8.2.0            |      8.2.0            |
 | display                |      hdmi             |      hdmi             |      hdmi             |   hdmi (1920x100)     |
-| graphical interface    |random EDID read freeze|      CLI              |      CLI              |      LXDE             |
+| graphical interface    |      CLI              |      CLI              |      CLI              |      LXDE             |
 | pmic                   |      axp805/6         |      axp805/6         |      axp805/6         |      axp805/6         |
 | idle Temp ºC / freq    |  40 ºC / ~480 Mhz   * |  40 ºC / ~480 Mhz     |  40 ºC / ~480 Mhz     |  42 ºC / ~480 Mhz     |
 | full Temp ºC / freq    |  80 ºC / 1.8 GHz    * |  78 ºC / 1.8 GHz      |  80 ºC / 1.8 GHz      |  80 ºC / 1.8 GHz      |
-| RAM memory usage (avg) |     109  Mbytes       |      65  Mbytes       |      65  Mbytes       |     155  Mbytes       |
+| RAM memory usage (avg) |     67   Mbytes       |      65  Mbytes       |      65  Mbytes       |     155  Mbytes       |
 | i2c                    |      yes              |      yes              |      yes              |      yes              |
 | spi                    |      spidev0.0        |      spidev0.0        |      spidev0.0        |      spidev0.0        |
 | Camera                 |      none             |      none             |      none             |      none             |
-| Wifi                   |      none             |      none             |      none             |      none             |
+| Wifi                   |   ethk9 usb drivers   |      none             |      none             |      none             |
 | BT                     |      none             |      none             |      none             |      none             |
 | ethernet               |      Gbps / 100Mbps   |    100 MBit / 1 GBit  |      Gbps             |      Gbps             |
 | sound                  |  hdmi-sound (yes)     |                       |                       |                       |
-| ir                     |  yes                  |                       |                       |                       |
-| issues                 |    (** reboot)        | reboot = shutdown     | reboot = shutdown     | reboot = shutdown     |
+| ir                     |     yes               |                       |                       |                       |
+| issues                 |    to be determined   | reboot = shutdown     | reboot = shutdown     | reboot = shutdown     |
 |                        |                       |                       |                       |                       |
-
-( **  ) possible fix with clementperon patch (atf + u-boot)
-
-( *** ) - Fix for IR:  https://github.com/avafinger/orangepi-h6-ubuntu-base-minimal/releases/tag/ir-1 (thanks to clementperon)
 
 * bootlog: https://gist.github.com/avafinger/8c4fe50e90fd3457e9b195fc970e86a1
 * bootlog 5.1-rc2: https://gist.github.com/avafinger/cfb7fd51543601a48b58795bb8e98138
 
-# HDMI workaround (not always works)
+# HDMI workaround (not always works - Desktop)
 
 This is a workaround for the EDID wrong modeline set.
 **Failing to set the correct timings for the HDMI (Desktop) will hang the board after a while!**
