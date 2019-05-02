@@ -2,9 +2,9 @@
 
 Ubuntu 18.04 base minimal image tested on the Orange Pi One Plus
 
-This is a follow up on the mainline kernel 5.0 for the H6 SBC:
+This is a follow up on the mainline kernel 5.0/5.1 for the H6 SBC:
 
-* Mainline Kernel 5.0
+* Mainline Kernel 5.0/5.1
 * HDMI
 * DVFS
 * Gbps and fast ethernet
