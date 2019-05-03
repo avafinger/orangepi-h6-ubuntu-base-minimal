@@ -44,29 +44,24 @@ https://github.com/avafinger/orangepi-h6-ubuntu-base-minimal/releases/tag/v1.9
 * bootlog: https://gist.github.com/avafinger/8c4fe50e90fd3457e9b195fc970e86a1
 * bootlog 5.1-rc2: https://gist.github.com/avafinger/cfb7fd51543601a48b58795bb8e98138
 
-# HDMI workaround (not always works - Desktop)
+# HDMI Desktop (fix up)
 
-This is a workaround for the EDID wrong modeline set.
-**Failing to set the correct timings for the HDMI (Desktop) will hang the board after a while!**
+Mainline Kernel 5.1-rc7 has a fix for the HDMI issue, it seems gcc 8.2 optimizations breaks the HDMI on Desktop.
 
-* Edit the file /boot/boot.cmd
-* Add the line:
-	gpio set ph2
+If you want to use Desktop LXDE, burn SD CARD with this:
+https://github.com/avafinger/orangepi-h6-ubuntu-base-minimal/releases/tag/v1.9
 
-Something like:
+and issue in shell:
 
-	# Recompile with:
-	# cd /media/alex/boot/
-	# sudo mkimage -C none -A arm -T script -d boot.cmd boot.scr
+	sudo apt-get update
+	sudo apt-get dist-upgrade
+	sudo apt-get install lxde
+	wait until finished...
+	sudo shutdown -h now
 	
-	gpio set ph2
-	setenv fsck.repair yes
-	setenv ramdisk initrd.img
-	setenv kernel Image
+Reboot, choose OpenBox instead of LXDE on first login with ubuntu/ubuntu , logout or shutdown in the OpenBox way, or
+CTRL+F1 to enter the **login prompt**, type the credentials and issue a **shutdown -h now** , on next login choose LXDE and type te credentials. That's it, enjoy LXDE and HDMI 1920x1080. 
 
-Save it and then recompile:
-	
-	sudo mkimage -C none -A arm -T script -d boot.cmd boot.scr
 
 # Installing
 You need *wget* and *curl* installed to grab the files in a Linux distro or use the **img** above.
