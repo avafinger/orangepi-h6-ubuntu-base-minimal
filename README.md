@@ -22,27 +22,40 @@ https://github.com/avafinger/orangepi-h6-ubuntu-base-minimal/releases/tag/v1.9
 
 |  SBC Dev Board sample  |   Orange Pi One Plus  |   Orange Pi One Plus  |   Orange Pi One Plus  |   Orange Pi One Plus  |
 |------------------------|-----------------------|-----------------------|-----------------------|-----------------------|
-| kernel version         |      5.1.rc7          |      5.0.1            |      5.0.2            |      5.0.2            |
-| gcc version            |      7.3.0            |      8.2.0            |      8.2.0            |      8.2.0            |
+| kernel version         |      5.1.rc7          |      5.1.0            |      5.0.2            |      5.0.2            |
+| gcc version            |      7.3.0            |      7.3.0            |      8.2.0            |      8.2.0            |
 | display                |      hdmi             |      hdmi             |      hdmi             |   hdmi (1920x100)     |
-| graphical interface    |      CLI              |      CLI              |      CLI              |      LXDE             |
+| graphical interface    |      CLI              |      CLI / Desktop    |      CLI              |      LXDE             |
 | pmic                   |      axp805/6         |      axp805/6         |      axp805/6         |      axp805/6         |
 | idle Temp ºC / freq    |  40 ºC / ~480 Mhz   * |  40 ºC / ~480 Mhz     |  40 ºC / ~480 Mhz     |  42 ºC / ~480 Mhz     |
 | full Temp ºC / freq    |  80 ºC / 1.8 GHz    * |  78 ºC / 1.8 GHz      |  80 ºC / 1.8 GHz      |  80 ºC / 1.8 GHz      |
-| RAM memory usage (avg) |     67   Mbytes       |      65  Mbytes       |      65  Mbytes       |     155  Mbytes       |
+| RAM memory usage (avg) |     67   Mbytes       |      208  Mbytes      |      65  Mbytes       |     155  Mbytes       |
 | i2c                    |      yes              |      yes              |      yes              |      yes              |
 | spi                    |      spidev0.0        |      spidev0.0        |      spidev0.0        |      spidev0.0        |
 | Camera                 |      none             |      none             |      none             |      none             |
 | Wifi                   |   ath9k usb drivers   |      none             |      none             |      none             |
 | BT                     |      none             |      none             |      none             |      none             |
 | ethernet               |      Gbps / 100Mbps   |    100 MBit / 1 GBit  |      Gbps             |      Gbps             |
-| sound                  |  hdmi-sound (yes)     |                       |                       |                       |
+| sound                  |  hdmi-sound (yes)     |   hdmi-sound / SPDF   |                       |                       |
 | ir                     |     yes               |                       |                       |                       |
-| issues                 |    to be determined   | reboot = shutdown     | reboot = shutdown     | reboot = shutdown     |
+| issues                 |    to be determined   | reboot = shutdown ?   | reboot = shutdown     | reboot = shutdown     |
 |                        |                       |                       |                       |                       |
 
 * bootlog: https://gist.github.com/avafinger/8c4fe50e90fd3457e9b195fc970e86a1
 * bootlog 5.1-rc2: https://gist.github.com/avafinger/cfb7fd51543601a48b58795bb8e98138
+
+# Mainlin Kernel 5.1.0
+
+8 GB sd card IMG and upgrade
+https://github.com/avafinger/orangepi-h6-ubuntu-base-minimal/releases/tag/v1.9
+
+or
+
+Install from Linux and upgrade:
+https://github.com/avafinger/orangepi-h6-ubuntu-base-minimal/releases/tag/v1.10
+
+Upgrade:
+https://github.com/avafinger/orangepi-h6-ubuntu-base-minimal/releases/tag/v1.11
 
 # HDMI Desktop (fix up)
 
@@ -93,6 +106,19 @@ In order to get a clear hdmi-soun output you must update u-boot to version 2019 
 
 	sudo aplay /usr/share/sounds/alsa/Front_Left.wav
 	Playing WAVE '/usr/share/sounds/alsa/Front_Left.wav' : Signed 16 bit Little Endian, Rate 48000 Hz, Mono
+
+* Kernel 5.1.0 has hdmi-sound / SPDF
+
+	sudo aplay -l
+	[sudo] password for ubuntu: 
+	**** List of PLAYBACK Hardware Devices ****
+	Home directory not accessible: Permission denied
+	card 0: SPDIF [On-board SPDIF], device 0: spdif-dit-hifi dit-hifi-0 []
+	  Subdevices: 1/1
+	  Subdevice #0: subdevice #0
+	card 1: allwinnerhdmi [allwinner-hdmi], device 0: 5091000.i2s-i2s-hifi i2s-hifi-0 []
+	  Subdevices: 1/1
+	  Subdevice #0: subdevice #0
 
 
 # Release v1.0
