@@ -33,11 +33,12 @@ https://github.com/avafinger/orangepi-h6-ubuntu-base-minimal/releases/tag/v1.9
 | i2c                    |      yes              |      yes              |      yes              |      yes              |
 | spi                    |      spidev0.0        |      spidev0.0        |      spidev0.0        |      spidev0.0        |
 | Camera                 |      none             |      none             |      none             |      none             |
-| Wifi                   |   ath9k usb drivers   |      none             |      none             |      none             |
+| Wifi                   |                       |   ath9k usb drivers   |      none             |      none             |
 | BT                     |      none             |      none             |      none             |      none             |
 | ethernet               |      Gbps / 100Mbps   |    100 MBit / 1 GBit  |      Gbps             |      Gbps             |
 | sound                  |  hdmi-sound (yes)     |   hdmi-sound / SPDF   |                       |                       |
-| ir                     |     yes               |                       |                       |                       |
+| ir                     |     yes               |      yes              |                       |                       |
+| linux-cedrus           |                       |      yes              |                       |                       |
 | issues                 |    to be determined   | reboot = shutdown ?   | reboot = shutdown     | reboot = shutdown     |
 |                        |                       |                       |                       |                       |
 
