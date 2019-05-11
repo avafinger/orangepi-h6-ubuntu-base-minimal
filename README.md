@@ -49,7 +49,7 @@ https://github.com/avafinger/orangepi-h6-ubuntu-base-minimal/releases/tag/v1.9
 
 # Mainline stable Kernel 5.1.1 (Experimental)
 
-Mainline kernel 5.1.1 based on work done by Bootlin (Cedrus), Jernej (hdmi), Clemente (mali, spdif, ir), LibreElec and linux-sunxi. This is at an early stage and needs proper testing and verification, but it is working. :)
+Mainline kernel 5.1.1 based on work done by Bootlin (Cedrus), Jernej (hdmi), Clement (mali, spdif, ir), LibreElec and linux-sunxi. This is at an early stage and needs proper testing and verification, but it is working. :)
 
 ![htop](https://github.com/avafinger/orangepi-h6-ubuntu-base-minimal/raw/master/img/lxde.png)
 
