@@ -22,28 +22,36 @@ https://github.com/avafinger/orangepi-h6-ubuntu-base-minimal/releases/tag/v1.9
 
 |  SBC Dev Board sample  |   Orange Pi One Plus  |   Orange Pi One Plus  |   Orange Pi One Plus  |   Orange Pi One Plus  |
 |------------------------|-----------------------|-----------------------|-----------------------|-----------------------|
-| kernel version         |      5.1.rc7          |      5.1.0            |      5.0.2            |      5.0.2            |
-| gcc version            |      7.3.0            |      7.3.0            |      8.2.0            |      8.2.0            |
+| kernel version         |      5.1.rc7          |      5.1.0            |      5.1.1            |      5.0.2            |
+| gcc version            |      7.3.0            |      7.3.0            |      7.3.0            |      8.2.0            |
 | display                |      hdmi             |      hdmi             |      hdmi             |   hdmi (1920x100)     |
 | graphical interface    |      CLI              |      CLI / Desktop    |      CLI              |      LXDE             |
 | pmic                   |      axp805/6         |      axp805/6         |      axp805/6         |      axp805/6         |
 | idle Temp ºC / freq    |  40 ºC / ~480 Mhz   * |  40 ºC / ~480 Mhz     |  40 ºC / ~480 Mhz     |  42 ºC / ~480 Mhz     |
 | full Temp ºC / freq    |  80 ºC / 1.8 GHz    * |  78 ºC / 1.8 GHz      |  80 ºC / 1.8 GHz      |  80 ºC / 1.8 GHz      |
-| RAM memory usage (avg) |     67   Mbytes       |      208  Mbytes      |      65  Mbytes       |     155  Mbytes       |
+| RAM memory usage (avg) |     67   Mbytes       |      208  Mbytes      | 85 CLI/225 LXDE Mbytes|     155  Mbytes       |
 | i2c                    |      yes              |      yes              |      yes              |      yes              |
 | spi                    |      spidev0.0        |      spidev0.0        |      spidev0.0        |      spidev0.0        |
 | Camera                 |      none             |      none             |      none             |      none             |
 | Wifi                   |                       |   ath9k usb drivers   |      none             |      none             |
 | BT                     |      none             |      none             |      none             |      none             |
 | ethernet               |      Gbps / 100Mbps   |    100 MBit / 1 GBit  |      Gbps             |      Gbps             |
-| sound                  |  hdmi-sound (yes)     |   hdmi-sound / SPDF   |                       |                       |
-| ir                     |     yes               |      yes              |                       |                       |
-| linux-cedrus           |                       |      yes              |                       |                       |
+| sound                  |  hdmi-sound (yes)     |   hdmi-sound / SPDIF**|   hdmi-sound / SPDIF**|                       |
+| ir                     |     yes               |      yes              |      yes              |                       |
+| linux-cedrus           |                       |      yes              |      yes              |                       |
+| mali-midgard           |                       |                       |      yes ?            |                       |
 | issues                 |    to be determined   | reboot = shutdown ?   | reboot = shutdown     | reboot = shutdown     |
 |                        |                       |                       |                       |                       |
 
+** Enabled for other OPI models
 * bootlog: https://gist.github.com/avafinger/8c4fe50e90fd3457e9b195fc970e86a1
 * bootlog 5.1-rc2: https://gist.github.com/avafinger/cfb7fd51543601a48b58795bb8e98138
+
+# Mainline stable Kernel 5.1.1 (Experimental)
+
+Mainline kernel 5.1.1 based on work done by Bootlin (Cedrus), Jernej (hdmi), Clemente (mali, spdif, ir), LibreElec and linux-sunxi. This is at an early stage and needs proper testing and verification, but it is working. :)
+
+![htop](https://github.com/avafinger/orangepi-h6-ubuntu-base-minimal/raw/master/img/lxde.png)
 
 # Mainline Kernel 5.1.0
 
@@ -292,7 +300,7 @@ https://github.com/avafinger/orangepi-h6-ubuntu-base-minimal/releases/tag/v1.8
 [![htop](https://github.com/avafinger/orangepi-h6-ubuntu-base-minimal/raw/master/img/hdmi_1920x1080.png)]
 
 
-Mainline kernel 5.0 bootlog
+Mainline kernel 5.1.1 bootlog
 
 	[    0.000000] Booting Linux on physical CPU 0x0000000000 [0x410fd034]
 	[    0.000000] Linux version 5.0.0-h6 (ubuntu@opi-h6) (gcc version 8.2.0 (Ubuntu 8.2.0-1ubuntu2~18.04)) #1 SMP PREEMPT Mon Mar 4 22:56:40 UTC 2019
