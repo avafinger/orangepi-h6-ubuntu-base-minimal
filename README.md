@@ -107,30 +107,53 @@ In order to get a clear hdmi-soun output you must update u-boot to version 2019 
 
 * Update u-boot (v1.7)
 
-	sudo dd if=./u-boot-hdmi-sound.bin of=/dev/sdc bs=8k seek=1
+		sudo dd if=./u-boot-hdmi-sound.bin of=/dev/sdc bs=8k seek=1
 
 * Install ALSA
 
-	sudo apt-get install alsa-utils alsa-tools libasound2 alsa-base
+		sudo apt-get install alsa-utils alsa-tools libasound2 alsa-base
 	
 * Test hdmi-sound:
 
-	sudo aplay /usr/share/sounds/alsa/Front_Left.wav
-	Playing WAVE '/usr/share/sounds/alsa/Front_Left.wav' : Signed 16 bit Little Endian, Rate 48000 Hz, Mono
+		sudo aplay /usr/share/sounds/alsa/Front_Left.wav
+		Playing WAVE '/usr/share/sounds/alsa/Front_Left.wav' : Signed 16 bit Little Endian, Rate 48000 Hz, Mono
 
-* Kernel 5.1.0 has hdmi-sound / SPDF
+* Kernel 5.1.0 has hdmi-sound / SPDIF
 
-	sudo aplay -l
-	[sudo] password for ubuntu: 
-	**** List of PLAYBACK Hardware Devices ****
-	Home directory not accessible: Permission denied
-	card 0: SPDIF [On-board SPDIF], device 0: spdif-dit-hifi dit-hifi-0 []
-	  Subdevices: 1/1
-	  Subdevice #0: subdevice #0
-	card 1: allwinnerhdmi [allwinner-hdmi], device 0: 5091000.i2s-i2s-hifi i2s-hifi-0 []
-	  Subdevices: 1/1
-	  Subdevice #0: subdevice #0
+		sudo aplay -l
+		[sudo] password for ubuntu: 
+		**** List of PLAYBACK Hardware Devices ****
+		Home directory not accessible: Permission denied
+		card 0: SPDIF [On-board SPDIF], device 0: spdif-dit-hifi dit-hifi-0 []
+		  Subdevices: 1/1
+		  Subdevice #0: subdevice #0
+		card 1: allwinnerhdmi [allwinner-hdmi], device 0: 5091000.i2s-i2s-hifi i2s-hifi-0 []
+		  Subdevices: 1/1
+		  Subdevice #0: subdevice #0
 
+* Kernel 5.1.1 hdmi-sound / SPDIF configuration file
+
+  Edit and save the file: /etc/asound.conf
+  
+		pcm.!default {
+		   type plug
+		   slave {
+		     pcm "hw:1,0"
+		   }
+		}
+
+		ctl.!default {
+		   type hw
+		   card 1
+		}  
+
+  cat /proc/asound/cards
+
+		 0 [SPDIF          ]: On-board_SPDIF - On-board SPDIF
+				      On-board SPDIF
+		 1 [allwinnerhdmi  ]: allwinner-hdmi - allwinner-hdmi
+				      allwinner-hdmi
+		
 
 # Release v1.0
 
