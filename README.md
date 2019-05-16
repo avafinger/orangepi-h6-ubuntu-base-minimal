@@ -33,14 +33,14 @@ https://github.com/avafinger/orangepi-h6-ubuntu-base-minimal/releases/tag/v1.9
 | i2c                    |      yes              |      yes              |      yes              |      yes              |
 | spi                    |      spidev0.0        |      spidev0.0        |      spidev0.0        |      spidev0.0        |
 | Camera                 |      none             |      none             |      none             |      none             |
-| Wifi                   |                       |   ath9k usb drivers   |      none             |      none             |
+| Wifi                   |                       |   ath9k usb drivers   |      none             |    ath9k usb drivers  |
 | BT                     |      none             |      none             |      none             |      none             |
 | ethernet               |      Gbps / 100Mbps   |    100 MBit / 1 GBit  |      Gbps             |      Gbps             |
 | sound                  |  hdmi-sound (yes)     |   hdmi-sound / SPDIF**|   hdmi-sound / SPDIF**| hdmi-sound / SPDIF**  |
 | ir                     |     yes               |      yes              |      yes              |      yes              |
 | linux-cedrus           |                       |      yes              |      yes              |      yes              |
 | mali-midgard           |                       |                       |      yes ?            |    yes/no             |
-| issues                 |    to be determined   | reboot = shutdown ?   | reboot = shutdown     | reboot = shutdown     |
+| issues                 |    to be determined   | reboot = shutdown ?   | reboot = shutdown     | reboot fixed          |
 |                        |                       |                       |                       |                       |
 
 ** Enabled for other OPI models
@@ -49,7 +49,10 @@ https://github.com/avafinger/orangepi-h6-ubuntu-base-minimal/releases/tag/v1.9
 
 # Mainline stable Kernel 5.1.2 (Experimental)
 
-Mainline kernel 5.1.2 with some modules enabled: Cedrus, hdmi, mali, ir, spdi0.0, i2c. Ignoring Mali due to blob availability in 32 bits only. Waiting for some panfrost build samples.
+Mainline kernel 5.1.2 with some modules enabled: Cedrus, hdmi, mali, ir, spdi0.0, i2c, ath9k wifi. Ignoring Mali due to blob availability in 32 bits only. Waiting for some panfrost build samples.
+
+Mainline Kernel 5.1.2-h6 : https://github.com/avafinger/orangepi-h6-ubuntu-base-minimal/releases/tag/v1.13
+Fix: reboot issue (need aditional tests)
 
 # Mainline stable Kernel 5.1.1 (Experimental)
 
