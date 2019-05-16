@@ -22,30 +22,34 @@ https://github.com/avafinger/orangepi-h6-ubuntu-base-minimal/releases/tag/v1.9
 
 |  SBC Dev Board sample  |   Orange Pi One Plus  |   Orange Pi One Plus  |   Orange Pi One Plus  |   Orange Pi One Plus  |
 |------------------------|-----------------------|-----------------------|-----------------------|-----------------------|
-| kernel version         |      5.1.rc7          |      5.1.0            |      5.1.1            |      5.0.2            |
-| gcc version            |      7.3.0            |      7.3.0            |      7.3.0            |      8.2.0            |
+| kernel version         |      5.1.rc7          |      5.1.0            |      5.1.1            |      5.1.2            |
+| gcc version            |      7.3.0            |      7.3.0            |      7.3.0            |      7.3.0            |
 | display                |      hdmi             |      hdmi             |      hdmi             |   hdmi (1920x100)     |
-| graphical interface    |      CLI              |      CLI / Desktop    |      CLI              |      LXDE             |
+| graphical interface    |      CLI              |      CLI / Desktop    |      CLI              |      CLI              |
 | pmic                   |      axp805/6         |      axp805/6         |      axp805/6         |      axp805/6         |
 | idle Temp ºC / freq    |  40 ºC / ~480 Mhz   * |  40 ºC / ~480 Mhz     |  40 ºC / ~480 Mhz     |  42 ºC / ~480 Mhz     |
 | full Temp ºC / freq    |  80 ºC / 1.8 GHz    * |  78 ºC / 1.8 GHz      |  80 ºC / 1.8 GHz      |  80 ºC / 1.8 GHz      |
-| RAM memory usage (avg) |     67   Mbytes       |      208  Mbytes      | 85 CLI/225 LXDE Mbytes|     155  Mbytes       |
+| RAM memory usage (avg) |     67   Mbytes       |      208  Mbytes      | 85 CLI/225 LXDE Mbytes|     65  Mbytes        |
 | i2c                    |      yes              |      yes              |      yes              |      yes              |
 | spi                    |      spidev0.0        |      spidev0.0        |      spidev0.0        |      spidev0.0        |
 | Camera                 |      none             |      none             |      none             |      none             |
 | Wifi                   |                       |   ath9k usb drivers   |      none             |      none             |
 | BT                     |      none             |      none             |      none             |      none             |
 | ethernet               |      Gbps / 100Mbps   |    100 MBit / 1 GBit  |      Gbps             |      Gbps             |
-| sound                  |  hdmi-sound (yes)     |   hdmi-sound / SPDIF**|   hdmi-sound / SPDIF**|                       |
-| ir                     |     yes               |      yes              |      yes              |                       |
-| linux-cedrus           |                       |      yes              |      yes              |                       |
-| mali-midgard           |                       |                       |      yes ?            |                       |
+| sound                  |  hdmi-sound (yes)     |   hdmi-sound / SPDIF**|   hdmi-sound / SPDIF**| hdmi-sound / SPDIF**  |
+| ir                     |     yes               |      yes              |      yes              |      yes              |
+| linux-cedrus           |                       |      yes              |      yes              |      yes              |
+| mali-midgard           |                       |                       |      yes ?            |    yes/no             |
 | issues                 |    to be determined   | reboot = shutdown ?   | reboot = shutdown     | reboot = shutdown     |
 |                        |                       |                       |                       |                       |
 
 ** Enabled for other OPI models
 * bootlog: https://gist.github.com/avafinger/8c4fe50e90fd3457e9b195fc970e86a1
 * bootlog 5.1-rc2: https://gist.github.com/avafinger/cfb7fd51543601a48b58795bb8e98138
+
+# Mainline stable Kernel 5.1.2 (Experimental)
+
+Mainline kernel 5.1.2 with some modules enabled: Cedrus, hdmi, mali, ir, spdi0.0, i2c. Ignoring Mali due to blob availability in 32 bits only. Waiting for some panfrost build samples.
 
 # Mainline stable Kernel 5.1.1 (Experimental)
 
