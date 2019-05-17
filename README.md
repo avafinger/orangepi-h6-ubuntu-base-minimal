@@ -2,7 +2,7 @@
 
 Ubuntu 18.04 base minimal image tested on the Orange Pi One Plus
 
-This is a follow up on the mainline kernel 5.0/5.1 for the H6 SBC:
+This is a follow up on the mainline kernel 5.1 for the H6 SBC:
 
 * Mainline Kernel 5.0/5.1
 * HDMI
@@ -50,7 +50,7 @@ https://github.com/avafinger/orangepi-h6-ubuntu-base-minimal/releases/tag/v1.9
 # Mainline stable Kernel 5.1.3 (Experimental)
 
 Mainline kernel 5.1.3 compiled with **gcc 8.3** with some modules enabled: Cedrus, hdmi, mali, ir, spdi0.0, i2c, ath9k wifi. 
-
+deb package: https://github.com/avafinger/orangepi-h6-ubuntu-base-minimal/releases/tag/v1.14
 Bootlog: https://gist.github.com/avafinger/3e3843c709c28fa104a2881202d25d80
 
 # Mainline stable Kernel 5.1.2 (Experimental)
