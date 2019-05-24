@@ -22,14 +22,14 @@ https://github.com/avafinger/orangepi-h6-ubuntu-base-minimal/releases/tag/v1.9
 
 |  SBC Dev Board sample  |   Orange Pi One Plus  |   Orange Pi One Plus  |   Orange Pi One Plus  |   Orange Pi One Plus  |
 |------------------------|-----------------------|-----------------------|-----------------------|-----------------------|
-| kernel version         |      5.1.3            |      5.1.0            |      5.1.1            |      5.1.2            |
+| kernel version         |      5.1.3            |      5.2.0-rc (*)     |      5.1.1            |      5.1.2            |
 | gcc version            |      8.3.0            |      7.3.0            |      7.3.0            |      7.3.0            |
 | display                |      hdmi             |      hdmi             |      hdmi             |   hdmi (1920x100)     |
-| graphical interface    |      CLI              |      CLI / Desktop    |      CLI              |      CLI              |
+| graphical interface    |      CLI              |      CLI              |      CLI              |      CLI              |
 | pmic                   |      axp805/6         |      axp805/6         |      axp805/6         |      axp805/6         |
 | idle Temp ºC / freq    |  40 ºC / ~480 Mhz   * |  40 ºC / ~480 Mhz     |  40 ºC / ~480 Mhz     |  42 ºC / ~480 Mhz     |
 | full Temp ºC / freq    |  80 ºC / 1.8 GHz    * |  78 ºC / 1.8 GHz      |  80 ºC / 1.8 GHz      |  80 ºC / 1.8 GHz      |
-| RAM memory usage (avg) |     75   Mbytes       |      208  Mbytes      | 85 CLI/225 LXDE Mbytes|     65  Mbytes        |
+| RAM memory usage (avg) |     75   Mbytes       |      80   Mbytes      | 85 CLI/225 LXDE Mbytes|     65  Mbytes        |
 | i2c                    |      yes              |      yes              |      yes              |      yes              |
 | spi                    |      spidev0.0        |      spidev0.0        |      spidev0.0        |      spidev0.0        |
 | Camera                 |      none             |      none             |      none             |      none             |
@@ -40,12 +40,19 @@ https://github.com/avafinger/orangepi-h6-ubuntu-base-minimal/releases/tag/v1.9
 | ir                     |     yes               |      yes              |      yes              |      yes              |
 | linux-cedrus           |     yes               |      yes              |      yes              |      yes              |
 | mali-midgard           |     yes/no            |                       |      yes ?            |    yes/no             |
-| issues                 |    reboot works       | reboot = shutdown ?   | reboot = shutdown     | reboot fixed          |
+| issues                 |    reboot works       | reboot = ok           | reboot = shutdown     | reboot fixed          |
 |                        |                       |                       |                       |                       |
 
 ** Enabled for other OPI models
 * bootlog: https://gist.github.com/avafinger/8c4fe50e90fd3457e9b195fc970e86a1
 * bootlog 5.1-rc2: https://gist.github.com/avafinger/cfb7fd51543601a48b58795bb8e98138
+
+# Mainline stable Kernel 5.2.0-rc1 (Experimental)
+
+Mainline kernel 5.2.0-rc1 compiled with **gcc 7.3** with some modules enabled: Cedrus, hdmi, mali, ir, spdi0.0, i2c, ath9k wifi but not tested. 
+deb package: 
+Bootlog: https://gist.github.com/avafinger/a6b43c140b52e7d48419294d88e8d311
+
 
 # Mainline stable Kernel 5.1.3 (Experimental)
 
