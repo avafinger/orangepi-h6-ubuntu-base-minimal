@@ -51,7 +51,7 @@ https://github.com/avafinger/orangepi-h6-ubuntu-base-minimal/releases/tag/v1.9
 
 Mainline kernel 5.2.0-rc1 compiled with **gcc 7.3** with some modules enabled: Cedrus, hdmi, mali, ir, spdi0.0, i2c, ath9k wifi but not tested. 
 
-deb package: 
+deb package: https://github.com/avafinger/orangepi-h6-ubuntu-base-minimal/releases/tag/v1.15
 
 Bootlog: https://gist.github.com/avafinger/a6b43c140b52e7d48419294d88e8d311
 
