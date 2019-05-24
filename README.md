@@ -4,7 +4,7 @@ Ubuntu 18.04 base minimal image tested on the Orange Pi One Plus
 
 This is a follow up on the mainline kernel 5.1 for the H6 SBC:
 
-* Mainline Kernel 5.0/5.1
+* Mainline Kernel 5.0/5.1/5.2
 * HDMI
 * DVFS
 * Gbps and fast ethernet
@@ -50,14 +50,18 @@ https://github.com/avafinger/orangepi-h6-ubuntu-base-minimal/releases/tag/v1.9
 # Mainline stable Kernel 5.2.0-rc1 (Experimental)
 
 Mainline kernel 5.2.0-rc1 compiled with **gcc 7.3** with some modules enabled: Cedrus, hdmi, mali, ir, spdi0.0, i2c, ath9k wifi but not tested. 
+
 deb package: 
+
 Bootlog: https://gist.github.com/avafinger/a6b43c140b52e7d48419294d88e8d311
 
 
 # Mainline stable Kernel 5.1.3 (Experimental)
 
 Mainline kernel 5.1.3 compiled with **gcc 8.3** with some modules enabled: Cedrus, hdmi, mali, ir, spdi0.0, i2c, ath9k wifi. 
+
 deb package: https://github.com/avafinger/orangepi-h6-ubuntu-base-minimal/releases/tag/v1.14
+
 Bootlog: https://gist.github.com/avafinger/3e3843c709c28fa104a2881202d25d80
 
 # Mainline stable Kernel 5.1.2 (Experimental)
@@ -65,6 +69,7 @@ Bootlog: https://gist.github.com/avafinger/3e3843c709c28fa104a2881202d25d80
 Mainline kernel 5.1.2 with some modules enabled: Cedrus, hdmi, mali, ir, spdi0.0, i2c, ath9k wifi. Ignoring Mali due to blob availability in 32 bits only. Waiting for some panfrost build samples.
 
 Mainline Kernel 5.1.2-h6 : https://github.com/avafinger/orangepi-h6-ubuntu-base-minimal/releases/tag/v1.13
+
 Fix: reboot issue (need aditional tests)
 
 # Mainline stable Kernel 5.1.1 (Experimental)
