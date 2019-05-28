@@ -22,7 +22,7 @@ https://github.com/avafinger/orangepi-h6-ubuntu-base-minimal/releases/tag/v1.9
 
 |  SBC Dev Board sample  |   Orange Pi One Plus  |   Orange Pi One Plus  |   Orange Pi One Plus  |   Orange Pi One Plus  |
 |------------------------|-----------------------|-----------------------|-----------------------|-----------------------|
-| kernel version         |      5.1.3            |      5.2.0-rc (*)     |      5.1.1            |      5.1.2            |
+| kernel version         |      5.1.3            |      5.2.0-rc2 (*)     |      5.1.1            |      5.1.2            |
 | gcc version            |      8.3.0            |      7.3.0            |      7.3.0            |      7.3.0            |
 | display                |      hdmi             |      hdmi             |      hdmi             |   hdmi (1920x100)     |
 | graphical interface    |      CLI              |      CLI              |      CLI              |      CLI              |
@@ -44,8 +44,17 @@ https://github.com/avafinger/orangepi-h6-ubuntu-base-minimal/releases/tag/v1.9
 |                        |                       |                       |                       |                       |
 
 ** Enabled for other OPI models
-* bootlog: https://gist.github.com/avafinger/8c4fe50e90fd3457e9b195fc970e86a1
-* bootlog 5.1-rc2: https://gist.github.com/avafinger/cfb7fd51543601a48b58795bb8e98138
+* rc2 needs to be tested
+
+# Mainline stable Kernel 5.2.0-rc2 (Experimental)
+
+Mainline kernel 5.2.0-rc2 compiled with **gcc 7.3** with some modules enabled: Cedrus, hdmi, mali, ir, spdi0.0, i2c, ath9k wifi but has not been fully tested. 
+
+deb package: https://github.com/avafinger/orangepi-h6-ubuntu-base-minimal/releases/tag/v1.16
+
+Bootlog: https://gist.github.com/avafinger/3354a8e55e7de5c043ad55e0a3cbe607
+
+
 
 # Mainline stable Kernel 5.2.0-rc1 (Experimental)
 
