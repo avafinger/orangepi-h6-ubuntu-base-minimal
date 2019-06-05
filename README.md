@@ -22,14 +22,14 @@ https://github.com/avafinger/orangepi-h6-ubuntu-base-minimal/releases/tag/v1.9
 
 |  SBC Dev Board sample  |   Orange Pi One Plus  |   Orange Pi One Plus  |   Orange Pi One Plus  |   Orange Pi One Plus  |
 |------------------------|-----------------------|-----------------------|-----------------------|-----------------------|
-| kernel version         |      5.1.3            |      5.2.0-rc2 (*)     |      5.1.1            |      5.1.2            |
+| kernel version         |      5.1.3            |      5.2.0-rc2 (*)    |   5.2.0-rc3 (*)       |      5.1.2            |
 | gcc version            |      8.3.0            |      7.3.0            |      7.3.0            |      7.3.0            |
 | display                |      hdmi             |      hdmi             |      hdmi             |   hdmi (1920x100)     |
 | graphical interface    |      CLI              |      CLI              |      CLI              |      CLI              |
 | pmic                   |      axp805/6         |      axp805/6         |      axp805/6         |      axp805/6         |
-| idle Temp ºC / freq    |  40 ºC / ~480 Mhz   * |  40 ºC / ~480 Mhz     |  40 ºC / ~480 Mhz     |  42 ºC / ~480 Mhz     |
-| full Temp ºC / freq    |  80 ºC / 1.8 GHz    * |  78 ºC / 1.8 GHz      |  80 ºC / 1.8 GHz      |  80 ºC / 1.8 GHz      |
-| RAM memory usage (avg) |     75   Mbytes       |      80   Mbytes      | 85 CLI/225 LXDE Mbytes|     65  Mbytes        |
+| idle Temp ºC / freq    |  40 ºC / ~480 Mhz   * |  40 ºC / ~480 Mhz     |  37 ºC / ~480 Mhz     |  42 ºC / ~480 Mhz     |
+| full Temp ºC / freq    |  80 ºC / 1.8 GHz    * |  78 ºC / 1.8 GHz      |  78 ºC / 1.8 GHz      |  80 ºC / 1.8 GHz      |
+| RAM memory usage (avg) |     75   Mbytes       |      80   Mbytes      |      80 Mbytes        |     65  Mbytes        |
 | i2c                    |      yes              |      yes              |      yes              |      yes              |
 | spi                    |      spidev0.0        |      spidev0.0        |      spidev0.0        |      spidev0.0        |
 | Camera                 |      none             |      none             |      none             |      none             |
@@ -39,12 +39,18 @@ https://github.com/avafinger/orangepi-h6-ubuntu-base-minimal/releases/tag/v1.9
 | sound                  |  hdmi-sound / SPDIF** |   hdmi-sound / SPDIF**|   hdmi-sound / SPDIF**| hdmi-sound / SPDIF**  |
 | ir                     |     yes               |      yes              |      yes              |      yes              |
 | linux-cedrus           |     yes               |      yes              |      yes              |      yes              |
-| mali-midgard           |     yes/no            |                       |      yes ?            |    yes/no             |
-| issues                 |    reboot works       | reboot = ok           | reboot = shutdown     | reboot fixed          |
+| mali-midgard           |     yes/no            |                       |                       |    yes/no             |
+| issues                 |    reboot works       | reboot = ok           | reboot =              | reboot fixed          |
 |                        |                       |                       |                       |                       |
 
 ** Enabled for other OPI models
-* rc2 needs to be tested
+* rc2 needs to be tested / rc3 requires aditional tests
+
+# Mainline stable Kernel 5.2.0-rc3 (Experimental)
+
+Mainline kernel 5.2.0-rc3 compiled with **gcc 7.3** with some modules enabled: Cedrus, hdmi, ir, spdi0.0, i2c, ath9k wifi but has not been fully tested. 
+
+Bootlog: https://gist.github.com/avafinger/77a9fd58c1d33387dc7edd59d03ce071
 
 # Mainline stable Kernel 5.2.0-rc2 (Experimental)
 
