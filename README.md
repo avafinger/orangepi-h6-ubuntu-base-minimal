@@ -2,7 +2,7 @@
 
 Ubuntu 18.04 base minimal image tested on the Orange Pi One Plus
 
-This is a follow up on the mainline kernel 5.1 for the H6 SBC:
+This is a follow up on the mainline kernel 5.1 / 5.2 for the H6 SBC:
 
 * Mainline Kernel 5.0/5.1/5.2
 * HDMI
@@ -22,12 +22,12 @@ https://github.com/avafinger/orangepi-h6-ubuntu-base-minimal/releases/tag/v1.9
 
 |  SBC Dev Board sample  |   Orange Pi One Plus  |   Orange Pi One Plus  |   Orange Pi One Plus  |   Orange Pi One Plus  |
 |------------------------|-----------------------|-----------------------|-----------------------|-----------------------|
-| kernel version         |      5.1.3            |      5.2.0-rc2 (*)    |   5.2.0-rc3 (*)       |      5.1.2            |
+| kernel version         |      5.1.3            |      5.2.0-rc4 (*)    |   5.2.0-rc3 (*)       |      5.1.2            |
 | gcc version            |      8.3.0            |      7.3.0            |      7.3.0            |      7.3.0            |
 | display                |      hdmi             |      hdmi             |      hdmi             |   hdmi (1920x100)     |
 | graphical interface    |      CLI              |      CLI              |      CLI              |      CLI              |
 | pmic                   |      axp805/6         |      axp805/6         |      axp805/6         |      axp805/6         |
-| idle Temp ºC / freq    |  40 ºC / ~480 Mhz   * |  40 ºC / ~480 Mhz     |  37 ºC / ~480 Mhz     |  42 ºC / ~480 Mhz     |
+| idle Temp ºC / freq    |  40 ºC / ~480 Mhz   * |  42 ºC / ~480 Mhz     |  37 ºC / ~480 Mhz     |  42 ºC / ~480 Mhz     |
 | full Temp ºC / freq    |  80 ºC / 1.8 GHz    * |  78 ºC / 1.8 GHz      |  78 ºC / 1.8 GHz      |  80 ºC / 1.8 GHz      |
 | RAM memory usage (avg) |     75   Mbytes       |      80   Mbytes      |      80 Mbytes        |     65  Mbytes        |
 | i2c                    |      yes              |      yes              |      yes              |      yes              |
@@ -44,7 +44,29 @@ https://github.com/avafinger/orangepi-h6-ubuntu-base-minimal/releases/tag/v1.9
 |                        |                       |                       |                       |                       |
 
 ** Enabled for other OPI models
-* rc2 needs to be tested / rc3 requires aditional tests
+* rc2 needs to be tested / rc3 / rc4 requires aditional tests
+
+# Mainline Kernel 5.2.0-rc4 (Experimental)
+
+Release: https://github.com/avafinger/orangepi-h6-ubuntu-base-minimal/releases/tag/v1.22
+Bootlog: https://gist.github.com/avafinger/1c8c0d4423610c671f7bb9a3761913af
+
+**IR Test**
+    root@opi-h6:/home/ubuntu# echo nec > /sys/class/rc/rc0/protocols
+    root@opi-h6:/home/ubuntu# cat /dev/input/event5 | hexdump
+    0000000 5ba1 5cfe 0000 0000 0e87 000d 0000 0000
+    0000010 0004 0004 0400 0000 5ba1 5cfe 0000 0000
+    0000020 0e87 000d 0000 0000 0000 0000 0000 0000
+    0000030 5ba1 5cfe 0000 0000 da36 000d 0000 0000
+    0000040 0004 0004 0400 0000 5ba1 5cfe 0000 0000
+    0000050 da36 000d 0000 0000 0000 0000 0000 0000
+    0000060 5ba2 5cfe 0000 0000 959c 0009 0000 0000
+    0000070 0004 0004 0401 0000 5ba2 5cfe 0000 0000
+    0000080 959c 0009 0000 0000 0000 0000 0000 0000
+    0000090 5ba2 5cfe 0000 0000 6147 000a 0000 0000
+    00000a0 0004 0004 0401 0000 5ba2 5cfe 0000 0000
+    00000b0 6147 000a 0000 0000 0000 0000 0000 0000
+
 
 # Mainline stable Kernel 5.2.0-rc3 (Experimental)
 
