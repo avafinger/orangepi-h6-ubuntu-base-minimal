@@ -49,9 +49,12 @@ https://github.com/avafinger/orangepi-h6-ubuntu-base-minimal/releases/tag/v1.9
 # Mainline Kernel 5.2.0-rc4 (Experimental)
 
 Release: https://github.com/avafinger/orangepi-h6-ubuntu-base-minimal/releases/tag/v1.22
+
 Bootlog: https://gist.github.com/avafinger/1c8c0d4423610c671f7bb9a3761913af
 
 **IR Test**
+
+
     root@opi-h6:/home/ubuntu# echo nec > /sys/class/rc/rc0/protocols
     root@opi-h6:/home/ubuntu# cat /dev/input/event5 | hexdump
     0000000 5ba1 5cfe 0000 0000 0e87 000d 0000 0000
