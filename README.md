@@ -50,6 +50,20 @@ https://github.com/avafinger/orangepi-h6-ubuntu-base-minimal/releases/tag/v1.9
 
 Pre-release: https://github.com/avafinger/orangepi-h6-ubuntu-base-minimal/releases/tag/1.23
 
+* Health
+
+    Every 2.0s: ./h6-monitor.sh                  opi-h6: Sun Sep 22 00:59:44 2019
+    
+    CPU1 freq      : 1008 MHz
+    CPU2 freq      : 1008 MHz
+    CPU3 freq      : 1320 MHz
+    CPU4 freq      : 1320 MHz
+    CPU count      : 4
+    Governor       : ondemand
+    Core voltage   : 1.16 V
+    SOC Temp       : 39.11 C
+
+
 # Mainline Kernel 5.2.0-rc4 (Experimental)
 
 Release: https://github.com/avafinger/orangepi-h6-ubuntu-base-minimal/releases/tag/v1.22
