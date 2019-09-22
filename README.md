@@ -4,7 +4,7 @@ Ubuntu 18.04 base minimal image tested on the Orange Pi One Plus
 
 This is a follow up on the mainline kernel 5.1 / 5.2 for the H6 SBC:
 
-* Mainline Kernel 5.0/5.1/5.2
+* Mainline Kernel 5.0/5.1/5.2/5.3
 * HDMI
 * DVFS
 * Gbps and fast ethernet
@@ -22,8 +22,8 @@ https://github.com/avafinger/orangepi-h6-ubuntu-base-minimal/releases/tag/v1.9
 
 |  SBC Dev Board sample  |   Orange Pi One Plus  |   Orange Pi One Plus  |   Orange Pi One Plus  |   Orange Pi One Plus  |
 |------------------------|-----------------------|-----------------------|-----------------------|-----------------------|
-| kernel version         |      5.1.3            |      5.2.0-rc4 (*)    |   5.2.0-rc3 (*)       |      5.1.2            |
-| gcc version            |      8.3.0            |      7.3.0            |      7.3.0            |      7.3.0            |
+| kernel version         |      5.1.3            |      5.3.1  (*)       |   5.2.0-rc3 (*)       |      5.1.2            |
+| gcc version            |      8.3.0            |      7.4.0            |      7.3.0            |      7.3.0            |
 | display                |      hdmi             |      hdmi             |      hdmi             |   hdmi (1920x100)     |
 | graphical interface    |      CLI              |      CLI              |      CLI              |      CLI              |
 | pmic                   |      axp805/6         |      axp805/6         |      axp805/6         |      axp805/6         |
@@ -40,11 +40,15 @@ https://github.com/avafinger/orangepi-h6-ubuntu-base-minimal/releases/tag/v1.9
 | ir                     |     yes               |      yes              |      yes              |      yes              |
 | linux-cedrus           |     yes               |      yes              |      yes              |      yes              |
 | mali-midgard           |     yes/no            |                       |                       |    yes/no             |
-| issues                 |    reboot works       | reboot = ok           | reboot =              | reboot fixed          |
+| issues                 |    reboot works       | reboot = ok ?         | reboot =              | reboot fixed          |
 |                        |                       |                       |                       |                       |
 
 ** Enabled for other OPI models
 * rc2 needs to be tested / rc3 / rc4 requires aditional tests
+
+# Mainline Kernel 5.3.1 (Experimental)
+
+Pre-release: https://github.com/avafinger/orangepi-h6-ubuntu-base-minimal/releases/tag/1.23
 
 # Mainline Kernel 5.2.0-rc4 (Experimental)
 
