@@ -2,9 +2,9 @@
 
 Ubuntu 18.04 base minimal image tested on the Orange Pi One Plus
 
-This is a follow up on the mainline kernel 5.1 / 5.2 for the H6 SBC:
+This is a follow up on the mainline kernel 5.1 / 5.2 /5.3 / 5.4 for the H6 SBC:
 
-* Mainline Kernel 5.0/5.1/5.2/5.3
+* Mainline Kernel 5.0/5.1/5.2/5.3/5.4
 * HDMI
 * DVFS
 * Gbps and fast ethernet
@@ -22,29 +22,71 @@ https://github.com/avafinger/orangepi-h6-ubuntu-base-minimal/releases/tag/v1.9
 
 |  SBC Dev Board sample  |   Orange Pi One Plus  |   Orange Pi One Plus  |   Orange Pi One Plus  |   Orange Pi One Plus  |
 |------------------------|-----------------------|-----------------------|-----------------------|-----------------------|
-| kernel version         |      5.1.3            |      5.3.1  (*)       |   5.2.0-rc3 (*)       |      5.1.2            |
+| kernel version         |      5.1.3            |      5.3.1  (*)       |      5.4.2  (*)       |      5.1.2            |
 | gcc version            |      8.3.0            |      7.4.0            |      7.3.0            |      7.3.0            |
 | display                |      hdmi             |      hdmi             |      hdmi             |   hdmi (1920x100)     |
 | graphical interface    |      CLI              |      CLI              |      CLI              |      CLI              |
 | pmic                   |      axp805/6         |      axp805/6         |      axp805/6         |      axp805/6         |
-| idle Temp ºC / freq    |  40 ºC / ~480 Mhz   * |  42 ºC / ~480 Mhz     |  37 ºC / ~480 Mhz     |  42 ºC / ~480 Mhz     |
-| full Temp ºC / freq    |  80 ºC / 1.8 GHz    * |  78 ºC / 1.8 GHz      |  78 ºC / 1.8 GHz      |  80 ºC / 1.8 GHz      |
-| RAM memory usage (avg) |     75   Mbytes       |      80   Mbytes      |      80 Mbytes        |     65  Mbytes        |
+| idle Temp ºC / freq    |  40 ºC / ~480 Mhz   * |  42 ºC / ~480 Mhz     |  46 ºC / 816 Mhz     |  42 ºC / ~480 Mhz     |
+| full Temp ºC / freq    |  80 ºC / 1.8 GHz    * |  78 ºC / 1.8 GHz      |  70 ºC / 1.5 GHz      |  80 ºC / 1.8 GHz      |
+| RAM memory usage (avg) |     75   Mbytes       |      80   Mbytes      |      60 Mbytes        |     65  Mbytes        |
 | i2c                    |      yes              |      yes              |      yes              |      yes              |
 | spi                    |      spidev0.0        |      spidev0.0        |      spidev0.0        |      spidev0.0        |
 | Camera                 |      none             |      none             |      none             |      none             |
 | Wifi                   |  ath9k usb drivers    |   ath9k usb drivers   |      none             |    ath9k usb drivers  |
 | BT                     |      none             |      none             |      none             |      none             |
 | ethernet               |      Gbps / 100Mbps   |    100 MBit / 1 GBit  |      Gbps             |      Gbps             |
-| sound                  |  hdmi-sound / SPDIF** |   hdmi-sound / SPDIF**|   hdmi-sound / SPDIF**| hdmi-sound / SPDIF**  |
+| sound                  |  hdmi-sound / SPDIF** |   hdmi-sound / SPDIF**|   hdmi-sound          | hdmi-sound / SPDIF**  |
 | ir                     |     yes               |      yes              |      yes              |      yes              |
 | linux-cedrus           |     yes               |      yes              |      yes              |      yes              |
 | mali-midgard           |     yes/no            |                       |                       |    yes/no             |
-| issues                 |    reboot works       | reboot = ok ?         | reboot =              | reboot fixed          |
+| issues                 |    reboot works       | reboot = ok ?         | reboot = ?            | reboot fixed          |
 |                        |                       |                       |                       |                       |
 
 ** Enabled for other OPI models
 * rc2 needs to be tested / rc3 / rc4 requires aditional tests
+
+# Mainline Kernel 5.4.2 (Experimental)
+
+The kernel thermal DVFS is a very conservative maximum frequency: 1488 MHz
+
+Boot log: https://gist.github.com/avafinger/6d55d02f9e5c0b0a79b8b2ada8c181ca
+
+* Kernel Health
+
+        CPU1 freq      : 816 MHz
+        CPU2 freq      : 1320 MHz
+        CPU3 freq      : 1320 MHz
+        CPU4 freq      : 1488 MHz
+        CPU count      : 4
+        Governor       : ondemand
+        Core voltage   : 1.00 V
+        SOC Temp       : 44.28 C
+
+
+        ubuntu@opi-h6:~$ 7z b
+        
+        7-Zip [64] 16.02 : Copyright (c) 1999-2016 Igor Pavlov : 2016-05-21
+        p7zip Version 16.02 (locale=C.UTF-8,Utf16=on,HugeFiles=on,64 bits,4 CPUs LE)
+        
+        LE
+        CPU Freq:  1442  1484  1482  1484  1484  1483  1484  1484  1484
+        
+        RAM size:     991 MB,  # CPU hardware threads:   4
+        RAM usage:    882 MB,  # Benchmark threads:      4
+        
+        		       Compressing  |                  Decompressing
+        Dict     Speed Usage    R/U Rating  |      Speed Usage    R/U Rating
+        	 KiB/s     %   MIPS   MIPS  |      KiB/s     %   MIPS   MIPS
+        
+        22:       2381   324    714   2317  |      64297   398   1377   5486
+        23:       2334   323    737   2379  |      63262   399   1371   5474
+        24:       2320   326    766   2495  |      61695   398   1361   5416
+        25:       2262   324    798   2583  |      59487   392   1351   5294
+        ----------------------------------  | ------------------------------
+        Avr:             324    754   2443  |              397   1365   5417
+        Tot:             361   1059   3930
+
 
 # Mainline Kernel 5.3.1 (Experimental)
 
