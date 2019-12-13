@@ -46,6 +46,10 @@ https://github.com/avafinger/orangepi-h6-ubuntu-base-minimal/releases/tag/v1.9
 ** Enabled for other OPI models
 * rc2 needs to be tested / rc3 / rc4 requires aditional tests
 
+# Mainline Kernel 5.4.3 (Experimental)
+
+deb package: https://github.com/avafinger/orangepi-h6-ubuntu-base-minimal/releases/tag/v1.25
+
 # Mainline Kernel 5.4.2 (Experimental)
 
 The kernel thermal DVFS is a very conservative maximum frequency: 1488 MHz
