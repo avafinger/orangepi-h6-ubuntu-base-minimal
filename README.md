@@ -2,7 +2,7 @@
 
 Ubuntu 18.04 base minimal image tested on the Orange Pi One Plus
 
-This is a follow up on the mainline kernel 5.1 / 5.2 /5.3 / 5.4 for the H6 SBC:
+This is a follow up on the mainline kernel 5.1 / 5.2 / 5.3 / 5.4 for the H6 SBC:
 
 * Mainline Kernel 5.0/5.1/5.2/5.3/5.4
 * HDMI
@@ -49,6 +49,8 @@ https://github.com/avafinger/orangepi-h6-ubuntu-base-minimal/releases/tag/v1.9
 # Mainline Kernel 5.4.3 (Experimental)
 
 deb package: https://github.com/avafinger/orangepi-h6-ubuntu-base-minimal/releases/tag/v1.25
+
+There is a fix on linux-image-5.4.3_1.0-26.deb , install seems to be correct now, hopefully.
 
 # Mainline Kernel 5.4.2 (Experimental)
 
