@@ -39,7 +39,7 @@ https://github.com/avafinger/orangepi-h6-ubuntu-base-minimal/releases/tag/v1.9
 | sound                  |  hdmi-sound / SPDIF** |   hdmi-sound / SPDIF**|   hdmi-sound          | hdmi-sound / SPDIF**  |
 | ir                     |     yes               |      yes              |      yes              |      yes              |
 | linux-cedrus           |     yes               |      yes              |      yes              |      yes              |
-| mali-midgard           |     yes/no            |                       |                       |    yes/no             |
+| mali-midgard           |     yes/no            |                       |    panfrost           |    yes/no             |
 | issues                 |    reboot works       | reboot = ok ?         | reboot = ?            | reboot fixed          |
 |                        |                       |                       |                       |                       |
 
@@ -51,6 +51,29 @@ https://github.com/avafinger/orangepi-h6-ubuntu-base-minimal/releases/tag/v1.9
 deb package: https://github.com/avafinger/orangepi-h6-ubuntu-base-minimal/releases/tag/v1.25
 
 There is a fix on linux-image-5.4.3_1.0-26.deb , install seems to be correct now, hopefully.
+
+* Panfrost
+
+Testing panfrost with kmscube:
+
+    sudo ./kmscube
+    Using display 0xaaaaedbb2670 with EGL version 1.4
+    ===================================
+    EGL information:
+      version: "1.4"
+      vendor: "Mesa Project"
+      client extensions: "EGL_EXT_client_extensions EGL_EXT_device_base EGL_EXT_device_enumeration EGL_EXT_device_query EGL_EXT_platform_base EGL_KHR_client_get_all_proc_addresses EGL_KHR_debug EGL_EXT_platform_wayland EGL_EXT_platform_x11 EGL_MESA_platform_gbm EGL_MESA_platform_surfaceless EGL_EXT_platform_device"
+      display extensions: "EGL_ANDROID_blob_cache EGL_EXT_buffer_age EGL_EXT_image_dma_buf_import EGL_KHR_cl_event2 EGL_KHR_config_attribs EGL_KHR_create_context EGL_KHR_create_context_no_error EGL_KHR_fence_sync EGL_KHR_get_all_proc_addresses EGL_KHR_gl_colorspace EGL_KHR_gl_renderbuffer_image EGL_KHR_gl_texture_2D_image EGL_KHR_gl_texture_3D_image EGL_KHR_gl_texture_cubemap_image EGL_KHR_image EGL_KHR_image_base EGL_KHR_image_pixmap EGL_KHR_no_config_context EGL_KHR_partial_update EGL_KHR_reusable_sync EGL_KHR_surfaceless_context EGL_EXT_pixel_format_float EGL_KHR_wait_sync EGL_MESA_configless_context EGL_MESA_drm_image EGL_MESA_image_dma_buf_export EGL_MESA_query_driver EGL_WL_bind_wayland_display "
+    ===================================
+    OpenGL ES 2.x information:
+      version: "OpenGL ES 2.0 Mesa 20.0.0-devel (git-ce52b49348)"
+      shading language version: "OpenGL ES GLSL ES 1.0.16"
+      vendor: "Panfrost"
+      renderer: "Mali T720 (Panfrost)"
+      extensions: "GL_EXT_blend_minmax GL_EXT_multi_draw_arrays GL_EXT_texture_format_BGRA8888 GL_OES_compressed_ETC1_RGB8_texture GL_OES_depth24 GL_OES_element_index_uint GL_OES_fbo_render_mipmap GL_OES_mapbuffer GL_OES_rgb8_rgba8 GL_OES_stencil8 GL_OES_texture_3D GL_OES_texture_float GL_OES_texture_float_linear GL_OES_texture_half_float GL_OES_texture_half_float_linear GL_OES_texture_npot GL_OES_vertex_half_float GL_OES_EGL_image GL_OES_depth_texture GL_OES_packed_depth_stencil GL_EXT_texture_type_2_10_10_10_REV GL_OES_get_program_binary GL_APPLE_texture_max_level GL_EXT_discard_framebuffer GL_EXT_read_format_bgra GL_EXT_frag_depth GL_NV_fbo_color_attachments GL_OES_EGL_image_external GL_OES_EGL_sync GL_OES_vertex_array_object GL_EXT_occlusion_query_boolean GL_EXT_texture_rg GL_EXT_unpack_subimage GL_NV_draw_buffers GL_NV_read_buffer GL_NV_read_depth GL_NV_read_depth_stencil GL_NV_read_stencil GL_EXT_draw_buffers GL_EXT_map_buffer_range GL_KHR_debug GL_KHR_texture_compression_astc_ldr GL_OES_required_internalformat GL_OES_surfaceless_context GL_EXT_separate_shader_objects GL_EXT_compressed_ETC1_RGB8_sub_texture GL_EXT_draw_elements_base_vertex GL_EXT_texture_border_clamp GL_KHR_context_flush_control GL_OES_draw_elements_base_vertex GL_OES_texture_border_clamp GL_KHR_no_error GL_KHR_texture_compression_astc_sliced_3d GL_KHR_parallel_shader_compile "
+    ===================================
+    Using modifier ffffffffffffff
+    Using modifier ffffffffffffff
 
 # Mainline Kernel 5.4.2 (Experimental)
 
@@ -92,6 +115,8 @@ Boot log: https://gist.github.com/avafinger/6d55d02f9e5c0b0a79b8b2ada8c181ca
         ----------------------------------  | ------------------------------
         Avr:             324    754   2443  |              397   1365   5417
         Tot:             361   1059   3930
+
+
 
 
 # Mainline Kernel 5.3.1 (Experimental)
