@@ -22,13 +22,13 @@ https://github.com/avafinger/orangepi-h6-ubuntu-base-minimal/releases/tag/v1.9
 
 |  SBC Dev Board sample  |   Orange Pi One Plus  |   Orange Pi One Plus  |   Orange Pi One Plus  |   Orange Pi One Plus  |
 |------------------------|-----------------------|-----------------------|-----------------------|-----------------------|
-| kernel version         |      5.1.3            |      5.3.1  (*)       |      5.4.2  (*)       |      5.1.2            |
+| kernel version         |      5.1.3            |      5.3.1  (*)       |      5.4.6  (*)       |      5.1.2            |
 | gcc version            |      8.3.0            |      7.4.0            |      7.3.0            |      7.3.0            |
 | display                |      hdmi             |      hdmi             |      hdmi             |   hdmi (1920x100)     |
 | graphical interface    |      CLI              |      CLI              |      CLI              |      CLI              |
 | pmic                   |      axp805/6         |      axp805/6         |      axp805/6         |      axp805/6         |
-| idle Temp ºC / freq    |  40 ºC / ~480 Mhz   * |  42 ºC / ~480 Mhz     |  46 ºC / 816 Mhz     |  42 ºC / ~480 Mhz     |
-| full Temp ºC / freq    |  80 ºC / 1.8 GHz    * |  78 ºC / 1.8 GHz      |  70 ºC / 1.5 GHz      |  80 ºC / 1.8 GHz      |
+| idle Temp ºC / freq    |  40 ºC / ~480 Mhz   * |  42 ºC / ~480 Mhz     |  44 ºC / 720 Mhz      |  42 ºC / ~480 Mhz     |
+| full Temp ºC / freq    |  80 ºC / 1.8 GHz    * |  78 ºC / 1.8 GHz      |  70 ºC / 1.8 GHz      |  80 ºC / 1.8 GHz      |
 | RAM memory usage (avg) |     75   Mbytes       |      80   Mbytes      |      60 Mbytes        |     65  Mbytes        |
 | i2c                    |      yes              |      yes              |      yes              |      yes              |
 | spi                    |      spidev0.0        |      spidev0.0        |      spidev0.0        |      spidev0.0        |
@@ -45,6 +45,10 @@ https://github.com/avafinger/orangepi-h6-ubuntu-base-minimal/releases/tag/v1.9
 
 ** Enabled for other OPI models
 * rc2 needs to be tested / rc3 / rc4 requires aditional tests
+
+# Mainline Kernel 5.4.6 (Experimental)
+
+Deb: https://github.com/avafinger/orangepi-h6-ubuntu-base-minimal/releases/tag/v1.26
 
 # Mainline Kernel 5.4.3 (Experimental)
 
